@@ -10,19 +10,6 @@
       rel="stylesheet"
     />
     <!-- New Widget Script for Production Environment -->
-    <script>
-      (function () {
-        var s = document.createElement("script");
-        s.src =
-          "https://noteefypublic.blob.core.windows.net/widget/scripts/noteefy-widget.min.dev.js";
-        s.async = true;
-        s.crossOrigin = "anonymous";
-        s.onerror = function (e) {
-          console.warn("Noteefy widget failed to load", e);
-        };
-        document.head.appendChild(s);
-      })();
-    </script>
   </head>
   <body>
     <header>
@@ -368,5 +355,18 @@
         </div>
       </div>
     </footer>
+    <script>
+      (function () {
+        var s = document.createElement("script");
+        s.src =
+          "https://noteefypublic.blob.core.windows.net/widget/scripts/noteefy-widget.dev.min.js";
+        s.async = true;
+        s.crossOrigin = "anonymous";
+        s.onerror = function (e) {
+          console.warn("Noteefy widget failed to load", e);
+        };
+        document.head.appendChild(s);
+      })();
+    </script>
   </body>
 </html>
