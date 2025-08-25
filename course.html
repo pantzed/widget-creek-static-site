@@ -359,7 +359,7 @@
       (async () => {
         try {
           const r = await fetch(
-            "https://noteefypublic.blob.core.windows.net/widget/scripts/manifest.dev.json",
+            "https://noteefypublic.blob.core.windows.net/widget/scripts/manifest.testing.json",
             { cache: "no-cache" }
           );
           const { url, sri } = await r.json();
