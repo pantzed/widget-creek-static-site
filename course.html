@@ -362,10 +362,10 @@
             "https://noteefypublic.blob.core.windows.net/widget/scripts/manifest.testing.json",
             { cache: "no-cache" }
           );
-          const { url, sri } = await r.json();
+          const { url, integrity } = await r.json();
           const s = document.createElement("script");
           s.src = url;
-          s.integrity = sri;
+          s.integrity = integrity;
           s.crossOrigin = "anonymous";
           s.async = true;
           s.onerror = (e) => console.warn("Noteefy widget failed to load", e);
